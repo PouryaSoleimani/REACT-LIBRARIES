@@ -32,7 +32,7 @@ const Lodash2 = () => {
   console.log(__.max([1, 2, 3, 4]))
   console.log(__.multiply(2, 6))
   console.log(__.subtract(100, 1))
-  
+
   // *RETURN
   return (
     <div className='text-white'>

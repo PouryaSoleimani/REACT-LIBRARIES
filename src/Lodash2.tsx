@@ -3,11 +3,7 @@ import _ from 'lodash'
 
 //TYPES 
 type ProductType = { id: number, title: string, price: number, isAvailable: boolean }
-
-
-
-
-
+type ItemType = number | ProductType
 // COMPONENT
 const Lodash2 = () => {
   //STATES
@@ -25,8 +21,12 @@ const Lodash2 = () => {
       {/* SUM */}
       <h1 className='text-6xl font-bold p-6 bg-zinc-900'> SUM : {_.sum([1, 2, 3, 4, 5])} </h1>
       {/* SUMBY */}
-      <h1 className='text-6xl font-bold p-6 bg-zinc-800'>{_.sumBy(products, (product: ProductType) => product.price).toLocaleString()} Tomans</h1>
-      {/*  */}
+      <h1 className='text-6xl font-bold p-6 bg-zinc-800'>{_.sumBy(products, (product) => product.price).toLocaleString()} Tomans</h1>
+      {/* FILTER */}
+      <h1 className='text-3xl flex items-center justify-start space-x-6 font-bold p-6 bg-zinc-700'>
+        {_.filter(products, (product) => { product.price * 2; return product })
+          .map((item) => <p>{item.id}.{item.title}</p>)
+        }</h1>
     </div>
   )
 }

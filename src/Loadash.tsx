@@ -1,8 +1,9 @@
 //^ LOADASH PAGE
 
+
 const Loadash = () => {
   return (
-    <h1 className='bg-pink-900 p-4 text-center w-full font-bold text-5xl text-slate-100 border-b-8 border-black '>LOADASH PAGE</h1>
+    <h1 className="text-slate-100 text-4xl font-bold bg-pink-500 p-4 text-center border-b-8 border-sky-300">LOADASH PAGE</h1>
   )
 }
 

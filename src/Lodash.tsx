@@ -12,7 +12,7 @@ import { useState } from "react"
 type ProductType = { id: number, title: string, price: number }
 type LodashObjType = { a: number, b: number, c: number, d: number }
 
-const Loadash = () => {
+const Lodash1 = () => {
   // PRODUCTS STATE
   const [products, setProducts] = useState([
     { id: 1, title: "Laptop", price: 20_000_000, count: 10 },
@@ -58,4 +58,4 @@ const Loadash = () => {
   )
 }
 
-export default Loadash  
+export default Lodash1 

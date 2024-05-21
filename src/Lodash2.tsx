@@ -25,10 +25,12 @@ const Lodash2 = () => {
 
   let castedArray = __.castArray({ id: 1 })
   console.log(castedArray)
-
+  //MATH
   console.log(__.gt(30, 20))
   console.log(__.add(10, 20))
   console.log(__.divide(50, 5))
+  console.log(__.max([1, 2, 3, 4]))
+  console.log(__.multiply(2, 6))
   // *RETURN
   return (
     <div className='text-white'>

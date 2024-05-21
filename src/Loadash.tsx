@@ -9,6 +9,9 @@ import { useState } from "react"
 // 4 - READ THE DOCUMENT OF EVERY METHOD BEFORE USING IT
 
 
+type ProductType = { id: number, title: string, price: number }
+type LodashObjType = { a: number, b: number, c: number, d: number }
+
 const Loadash = () => {
   // PRODUCTS STATE
   const [products, setProducts] = useState([
@@ -17,7 +20,7 @@ const Loadash = () => {
     { id: 3, title: "Hub", price: 300_000, count: 12 },
   ])
 
-
+  const LodashPickObj: LodashObjType = { a: 10, b: 20, c: 30, d: 40 }
 
 
   // RETURN
@@ -37,14 +40,24 @@ const Loadash = () => {
       <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-blue-500 flex'> FILTERED ITEMS : <span className="pl-2 flex text-purple-600 text-5xl">{Lodash.filter(products, (product) => product.price > 300_000).map(item => <p className="px-2">{item.title} /</p>)} </span></h2>
 
       {/* LOADSH.FILTER 2 - WITH AN OBJECT*/}
-      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-blue-500 flex items-center'> FILTERED ITEMS 2 :<span className="pl-2 flex text-cyan-400 text-5xl">{Lodash.filter(products, { title: "Hub" }).map(item => <p className="px-2">{item.title}</p>)}  </span></h2>
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-lime-500 flex items-center'> FILTERED ITEMS 2 :<span className="pl-2 flex text-cyan-400 text-5xl">{Lodash.filter(products, { title: "Hub" }).map(item => <p className="px-2">{item.title}</p>)}  </span></h2>
 
       {/* LOADSH.FILTER 2 - WITH CHECKING OF TRUTHY OF FALSY VALUES*/}
-      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-blue-500 flex items-center'> FILTERED ITEMS 2 :<span className="pl-2 flex text-red-600 text-5xl">{Lodash.filter(products, "count").map(item => <p className="px-2">{item.title} /</p>)}  </span></h2>
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-pink-500 flex items-center'> FILTERED ITEMS 2 :<span className="pl-2 flex text-red-600 text-5xl">{Lodash.filter(products, "count").map(item => <p className="px-2">{item.title} /</p>)}  </span></h2>
 
+      {/* LODASH.MAP */}
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-white flex items-center'>
+        {Lodash.map(products, product => { product.price += 1_000_000; return product })
+          .map((product: ProductType) => <p className="px-2 text-lime-400 text-4xl">  {product.title} : {product.price.toLocaleString()} <span className="text-red-700">/</span> </p>)}
+      </h2>
+
+      {/* LODASH.PICK */}
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-violet-600 flex items-center'>LODASH PICK : {Lodash.pick(LodashPickObj, ['a', 'b']).a} </h2>
+      {/* LODASH PICKBY */}
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-violet-600 flex items-center'>LODASH PICK : {Lodash.pickBy(LodashPickObj, Lodash.isNumber).b} </h2>
 
     </>
   )
 }
 
-export default Loadash   
+export default Loadash  

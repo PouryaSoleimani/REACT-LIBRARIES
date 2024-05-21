@@ -1,5 +1,7 @@
 //^ LOADASH PAGE
-
+// & LOADASH TUTORIAL
+// 1 - INSTALL LOADASH FROM ITS OFFICIAL WEBSITE
+// 2 -
 
 const Loadash = () => {
   return (

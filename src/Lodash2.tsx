@@ -22,7 +22,11 @@ const Lodash2 = () => {
 
   return (
     <div className='text-white'>
-      Lodash2
+      {/* SUM */}
+      <h1 className='text-6xl font-bold p-6 bg-zinc-900'> SUM : {_.sum([1, 2, 3, 4, 5])} </h1>
+      {/* SUMBY */}
+      <h1 className='text-6xl font-bold p-6 bg-zinc-800'>{_.sumBy(products, (product: ProductType) => product.price).toLocaleString()} Tomans</h1>
+      {/*  */}
     </div>
   )
 }

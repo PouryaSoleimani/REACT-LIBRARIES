@@ -41,7 +41,7 @@ const Loadash = () => {
 
       <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-lime-500 flex items-center'> Filtered items 2 :<span className="pl-2 flex text-cyan-400 text-5xl">{Lodash.filter(products, { title: "Hub" }).map(item => <p className="px-2">{item.title}</p>)}  </span></h2>
 
-      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-pink-500 flex items-center'> Filtered items 2 :<span className="pl-2 flex text-red-600 text-5xl">{Lodash.filter(products, "count").map(item => <p className="px-2">{item.title} /</p>)}  </span></h2>
+      <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-pink-500 flex items-center'> Filtered items 3 :<span className="pl-2 flex text-red-600 text-5xl">{Lodash.filter(products, "count").map(item => <p className="px-2">{item.title} /</p>)}  </span></h2>
 
       {/*//^ MAP */}
       <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-white flex items-center'>

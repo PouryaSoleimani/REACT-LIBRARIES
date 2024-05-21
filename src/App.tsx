@@ -4,7 +4,7 @@ function Home() {
 
   return (
     <>
-    <h1 className='bg-slate-800 p-2 text-center w-full font-bold '>REACT-LIBRARIES HOMEPAGE</h1>
+      <h1 className='bg-zinc-800 p-4 text-center w-full font-bold text-5xl text-slate-100 border-b-8 border-black '>REACT-LIBRARIES HOMEPAGE</h1>
     </>
   )
 }

@@ -1,5 +1,4 @@
 // ^APP.TSX
-import '../CSS/App.css'
 
 function Home() {
 

@@ -6,8 +6,13 @@ import toast, { Toaster } from 'react-hot-toast';
 // 2 - FIRST WE GET THE NUMBER OF THE INPUT FROM CLIENT AND SAVE IT TO A STATE , USING {useState} HOOK
 // 3 - THEN WE SEND THE CODE TO THE SERVER USING A FETCH {POST} METHOD , WITH A BODY THAT CONTAINS THE STRINGIFIED VALUE OF OUR {PHONE NUMBER}
 // 4 - WE CATCH THE DATA BY USING { const data = await res.json() }
+// 5 - IF OUR REQUEST'S RESPONSE STATUS WAS 200 , WE WILL SHOW A TOAST OF SUCCESS TO THE CLIENT ==> ( if (res.statusCode === 200) {notify('OK')} )
+// 6 - BUT IT THE REQUEST'S RESPONSE STATUS WAS NOT 200 AND THERE WERE SOME PROBLEMS , WE WILL SHOW AN ERROR TOAST TO THE CLIENT ==> notify('Wrong Number')
 
 
+
+
+// COMPONENT
 const Otp = () => {
   //TOAST
   const notify = () => toast('✅ Code Sent Successfully ', { style: { background: '#333', color: '#fff', fontSize: "20px" } })
@@ -15,6 +20,7 @@ const Otp = () => {
 
   const [phone, setPhone] = useState('')
 
+  //FORM HANDLER
   function phoneFormHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     console.log(phone)

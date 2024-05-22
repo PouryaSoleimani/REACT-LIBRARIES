@@ -17,7 +17,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const Otp = () => {
   //TOAST
   const notify = () => toast('✅ Code Sent Successfully ', { style: { background: '#333', color: '#fff', fontSize: "20px" } })
-  const notify2 = () => toast('❌ Wrong Number ... ', { style: { background: '#333', color: '#fff', fontSize: "20px" } });
+  const notify2 = () => toast('❌ Wrong Number ... ', { style: { background: '#333', color: '#fff', fontSize: "20px" } })
 
   const [phone, setPhone] = useState('')
 

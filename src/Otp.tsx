@@ -9,6 +9,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 const Otp = () => {
+  //TOAST
   const notify = () => toast('✅ Code Sent Successfully ', { style: { background: '#333', color: '#fff', fontSize: "20px" } })
   const notify2 = () => toast('❌ Wrong Number ... ', { style: { background: '#333', color: '#fff', fontSize: "20px" } });
 
@@ -23,7 +24,7 @@ const Otp = () => {
 
 
   //RETURN
-  return (
+  return ( 
     <div className='w-screen h-screen flex flex-col items-center justify-center'>
       <Toaster position="top-right" reverseOrder={false} />
       <h1 className='text-white font-extrabold text-6xl my-6'>ONE TIME PASSWORD</h1>

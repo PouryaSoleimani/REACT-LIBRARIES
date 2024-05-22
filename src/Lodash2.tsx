@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import __ from 'lodash'
-
 //TYPES 
 type ProductType = { id: number, title: string, price: number, isAvailable: boolean }
-type ItemType = number | ProductType
+
+
+
 //^ COMPONENT
 const Lodash2 = () => {
   //STATES

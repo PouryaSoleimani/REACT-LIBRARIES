@@ -1,5 +1,5 @@
 //^ OTP PAGE
-import React, { FormEventHandler, useState } from 'react'
+import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 //& TUTORIAL 
 // 1 - WHAT IS OTP ==> One Time Password

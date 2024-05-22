@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 // 1 - WHAT IS OTP ==> One Time Password
 // 2 - FIRST WE GET THE NUMBER OF THE INPUT FROM CLIENT AND SAVE IT TO A STATE , USING {useState} HOOK
 // 3 - THEN WE SEND THE CODE TO THE SERVER USING A FETCH {POST} METHOD , WITH A BODY THAT CONTAINS THE STRINGIFIED VALUE OF OUR {PHONE NUMBER}
-
+// 4 - WE CATCH THE DATA BY USING { const data = await res.json() }
 
 
 const Otp = () => {

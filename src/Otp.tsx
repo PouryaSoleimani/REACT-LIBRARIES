@@ -2,6 +2,9 @@
 import React from 'react'
 //& TUTORIAL
 // 1 - WHAT IS OTP 
+
+
+
 const Otp = () => {
   return (
     <div className='w-screen h-screen flex flex-col items-center justify-center'>
@@ -15,4 +18,4 @@ const Otp = () => {
   )
 }
 
-export default Otp 
+export default Otp   

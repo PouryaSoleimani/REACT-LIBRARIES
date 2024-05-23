@@ -11,19 +11,9 @@ const CkEditor = () => {
       <CKEditor
         editor={ClassicEditor}
         data="<h1>Hello from CKEditor&nbsp;5!</h1>"
-        onReady={editor => {
-          // You can store the "editor" and use when it is needed.
-          console.log('Editor is ready to use!', editor);
-        }}
-        onChange={(event) => {
-          console.log(event);
-        }}
-        onBlur={(event, editor) => {
-          console.log('Blur.', editor);
-        }}
-        onFocus={(event, editor) => {
-          console.log('Focus.', editor);
-        }}
+        onChange={(editor) => { console.log(editor) }}
+        onBlur={(event, editor) => { console.log('Blur.', editor); }}
+        onFocus={(event, editor) => { console.log('Focus.', editor); }}
       />
     </div>
   )

@@ -29,7 +29,7 @@ const Lodash1 = () => {
       <h1 className="text-slate-100 text-3xl font-bold bg-pink-500 p-4 text-center border-b-4 border-sky-300">LODASH PAGE</h1>
       <hr />
 
-      {/* SUM */}
+      {/* SUM */}    
       <h2 className='text-white text-3xl font-bold px-8 py-6 bg-zinc-800 border-b-4 border-red-600'>Sum : {Lodash.sum([1, 2, 3, 4])}</h2>
 
       {/* SUMBY */}

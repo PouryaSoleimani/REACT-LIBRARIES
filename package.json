@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^41.4.2",
+    "@ckeditor/ckeditor5-editor-classic": "^41.4.2",
     "@ckeditor/ckeditor5-react": "^7.0.0",
+    "@ckeditor/vite-plugin-ckeditor5": "^0.1.3",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "match-sorter": "^6.3.4",

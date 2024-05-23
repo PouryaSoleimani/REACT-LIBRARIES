@@ -1,13 +1,11 @@
 //^ CK EDITOR PAGE
 import { CKEditor } from '@ckeditor/ckeditor5-react'
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import ClassicEditor from './ckeditor.ts';
 
 
-function App() {
+import React from 'react'
 
-
-
-
+const CkEditor = () => {
   return (
     <div className="App">
       <h2>Using CKEditor&nbsp;5 build in React</h2>
@@ -29,7 +27,7 @@ function App() {
         }}
       />
     </div>
-  );
+  )
 }
 
-export default App;
+export default CkEditor

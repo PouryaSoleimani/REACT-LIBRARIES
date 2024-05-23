@@ -10,7 +10,7 @@ import Otp from "./src/Otp";
 // * ROUTER
 export const router = createBrowserRouter([
   { path: '/', element: <Home /> },
-  { path: '/loadash1', element: <Lodash1 /> },
-  { path: '/loadash2', element: <Lodash2 /> },
+  { path: '/lodash1', element: <Lodash1 /> },
+  { path: '/lodash2', element: <Lodash2 /> },
   { path: '/otp', element: <Otp /> },
 ])

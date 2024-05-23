@@ -7,7 +7,7 @@ import React from 'react'
 
 const CkEditor = () => {
   return (
-    <div className="App">
+    <div className="w-screen h-screen">
       <h2>Using CKEditor&nbsp;5 build in React</h2>
       <CKEditor
         editor={ClassicEditor}

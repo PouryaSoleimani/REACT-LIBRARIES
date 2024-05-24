@@ -26,7 +26,8 @@
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.1",
     "recoil": "^0.7.7",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.4",

@@ -5,6 +5,7 @@ import Lodash1 from "./src/Lodash";
 import Lodash2 from "./src/Lodash2";
 import Otp from "./src/Otp";
 import CkEditor from "./src/CkEditorComponent";
+import SSO from "./src/SSO";
 
 
 
@@ -15,4 +16,5 @@ export const router = createBrowserRouter([
   { path: '/lodash2', element: <Lodash2 /> },
   { path: '/otp', element: <Otp /> },
   { path: '/ck-editor', element: <CkEditor /> },
+  { path: '/sso', element: <SSO /> },
 ])

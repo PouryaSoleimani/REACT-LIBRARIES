@@ -8,4 +8,4 @@ const SSO = () => {
   )
 }
 
-export default SSO
+export default SSO  

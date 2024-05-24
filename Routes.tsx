@@ -4,7 +4,7 @@ import Home from './src/App'
 import Lodash1 from "./src/Lodash";
 import Lodash2 from "./src/Lodash2";
 import Otp from "./src/Otp";
-import CkEditor from "./src/CkEditor";
+import CkEditor from "./src/CkEditorComponent";
 
 
 

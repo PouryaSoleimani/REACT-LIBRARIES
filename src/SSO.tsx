@@ -12,13 +12,20 @@ import React from 'react'
 // 4 - READ THE DOCUMENT FOR MORE INFOS ...
 
 
-//* TUTORIAL 2 :
+//* TUTORIAL 2 : USING GOOGLE , AND NOT AN EXTERNAL PACKAGE
 // FOR INITIALIZING THE GOOGLE ACCOUNT : 
+//? FIRST INITIALIZING
 // google.accounts.id.initialize ( {
-    // client_id : 'adasdsad23214125fasf' --> OUR CLIENT ID
-    // callback : ()=>{
-      // console.log('LOGGED IN )  ==> A FUNCTION THAT FIRES WHEN THE USER CONNECTS
-    }
+// client_id : 'adasdsad23214125fasf' --> OUR CLIENT ID
+// callback : ()=>{
+// console.log('LOGGED IN )  ==> A FUNCTION THAT FIRES WHEN THE USER CONNECTS
+//}
+//})
+//! ELEMENT SELECTION FOR RENDERING THE GOOGLE BUTTON
+// google.accounts.id.renderButton(document.querySelector("#myButton"),{
+// ADDITIONAL STYLES
+// theme : "outline",
+// size : "medium"
 //})
 
 const SSO = () => {

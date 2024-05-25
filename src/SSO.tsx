@@ -14,6 +14,9 @@ import React from 'react'
 
 //* TUTORIAL 2 :
 // FOR INITIALIZING THE GOOGLE ACCOUNT : 
+// google.accounts.id.initialize ( {
+    // client_id : 'adasdsad23214125fasf' --> OUR CLIENT ID
+//})
 
 const SSO = () => {
   return (

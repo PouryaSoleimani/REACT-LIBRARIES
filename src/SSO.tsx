@@ -9,6 +9,10 @@ import React from 'react'
 // 1 - FIRST GET YOUR {clientID} from ((console.cloud.google.com))
 // 2 - WRAP THE WHOLE APPLICATION WHITE <GoogleOAuthProvider>
 // 3 - JUST IMPORT THE COMPONENTS AND USE IT LIKE THE DOCUMENT
+// 4 - READ THE DOCUMENT FOR MORE INFOS ...
+
+
+
 
 const SSO = () => {
   return (

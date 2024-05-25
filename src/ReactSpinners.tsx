@@ -6,10 +6,13 @@ import PuffLoader from "react-spinners/PuffLoader";
 import PulseLoader from "react-spinners/PulseLoader";
 import FadeLoader from "react-spinners/FadeLoader";
 
-// & TUTORIAL
+// ** TUTORIAL
 // 1 - INSTALL THE PACKAGE
 // 2 - USE THE PACKAGE {STORY BOOK} PAGE TO SELECT AND COPY THE SPINNER YOU WANT
 // 3 - CUSTOMIZE IT AS YOU WANT
+
+
+
 
 const ReactSpinners = () => {
   return (

@@ -6,7 +6,10 @@ import PuffLoader from "react-spinners/PuffLoader";
 import PulseLoader from "react-spinners/PulseLoader";
 import FadeLoader from "react-spinners/FadeLoader";
 
-
+// & TUTORIAL
+// 1 - INSTALL THE PACKAGE
+// 2 - USE THE PACKAGE {STORY BOOK} PAGE TO SELECT AND COPY THE SPINNER YOU WANT
+// 3 - CUSTOMIZE IT AS YOU WANT
 
 const ReactSpinners = () => {
   return (
@@ -18,7 +21,7 @@ const ReactSpinners = () => {
         <BeatLoader color="#36d7b7" />
         <PuffLoader color="orange" />
         <PulseLoader color="white" />
-        <FadeLoader color="hotpink" />
+        <FadeLoader color="hotpink" speedMultiplier={.8} />
       </div>
     </div>
   )

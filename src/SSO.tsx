@@ -27,6 +27,17 @@ import React from 'react'
 // theme : "outline",
 // size : "medium"
 //})
+//& GETTING THE USERS DATA FROM RESPONSE IN THE CALLBACK FUNCTION
+// google.accounts.id.initialize ( {
+// client_id : 'adasdsad23214125fasf' --> OUR CLIENT ID
+// callback : (response)=>{
+// console.log( respnse )  ==> HERE WE GET AN OBJECT CALLED RESPONE , THAT CONTAINS THE USERS DATA
+//}
+// WE CAN ACCESS THE {CREDENTIAL} PROPERTY FROM THE RESPONSE OBJECT  , WHICH IS A TOKEN , THEN WE MUST DECODE THE TOKEN USING AN EXTERNAL PACKAGE CALLED {jwt-decode}
+//
+//})
+//^ FOR USER ACCOUNTS SUGGESTION PROMPT
+// --> google.accounts.id.prompt()
 
 const SSO = () => {
   return (

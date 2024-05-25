@@ -14,7 +14,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 const ReactSpinners = () => {
   return (
     <div>
-      <h1 className='text-4xl text-white bg-cyan-800 py-5 text-center font-bold'>React-Spinners</h1>
+      <h1 className='text-4xl text-white bg-pink-400 py-5 text-center font-bold'>React-Spinners</h1>
 
       <div className='flex flex-col items-center justify-center bg-zinc-800 space-y-10 px-10 py-16 w-[30rem] mx-auto my-24 border-8 rounded-xl '>
         <BarLoader color='red' aria-label="Loading Spinner" data-testid="loader" />

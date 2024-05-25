@@ -12,7 +12,8 @@ import React from 'react'
 // 4 - READ THE DOCUMENT FOR MORE INFOS ...
 
 
-
+//* TUTORIAL 2 :
+// FOR INITIALIZING THE GOOGLE ACCOUNT : 
 
 const SSO = () => {
   return (

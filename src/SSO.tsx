@@ -16,6 +16,9 @@ import React from 'react'
 // FOR INITIALIZING THE GOOGLE ACCOUNT : 
 // google.accounts.id.initialize ( {
     // client_id : 'adasdsad23214125fasf' --> OUR CLIENT ID
+    // callback : ()=>{
+      // console.log('LOGGED IN )  ==> A FUNCTION THAT FIRES WHEN THE USER CONNECTS
+    }
 //})
 
 const SSO = () => {

@@ -6,6 +6,7 @@ import Lodash2 from "./src/Lodash2";
 import Otp from "./src/Otp";
 import CkEditor from "./src/CkEditorComponent";
 import SSO from "./src/SSO";
+import ReactSpinners from "./src/ReactSpinners";
 
 
 
@@ -17,4 +18,5 @@ export const router = createBrowserRouter([
   { path: '/otp', element: <Otp /> },
   { path: '/ck-editor', element: <CkEditor /> },
   { path: '/sso', element: <SSO /> },
+  { path: '/react-spinners', element: <ReactSpinners /> },
 ])

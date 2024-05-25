@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.23.1",
+    "react-spinners": "^0.13.8",
     "recoil": "^0.7.7",
     "sort-by": "^1.2.0",
     "yarn": "^1.22.21"

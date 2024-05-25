@@ -1,3 +1,4 @@
+//^ REACT SPINNERS PAGE
 import React from 'react'
 
 const ReactSpinners = () => {
@@ -6,4 +7,4 @@ const ReactSpinners = () => {
   )
 }
 
-export default ReactSpinners
+export default ReactSpinners 

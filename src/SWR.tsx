@@ -6,7 +6,10 @@ const SWR = () => {
 
   const [products, setProducts] = useState([])
 
-  function fetcher() { fetch('https://fakestoreapi.com/products').then(response => response.json()).then(result => setProducts(result)) }
+  // function fetcher() { fetch('https://fakestoreapi.com/products').then(response => response.json()).then(result => setProducts(result)) }
+  function fetcher() {
+    
+  }
   
   const { error, isLoading } = useSWR('https://fakestoreapi.com/products', fetcher)
 

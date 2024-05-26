@@ -25,6 +25,7 @@ const ReactSpinners = () => {
         <PuffLoader color="orange" />
         <PulseLoader color="white" />
         <FadeLoader color="hotpink" speedMultiplier={.8} />
+        <ScaleLoader color="#36d7b7" />
       </div>
     </div>
   )

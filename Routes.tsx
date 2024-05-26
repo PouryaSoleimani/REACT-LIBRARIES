@@ -7,6 +7,7 @@ import Otp from "./src/Otp";
 import CkEditor from "./src/CkEditorComponent";
 import SSO from "./src/SSO";
 import ReactSpinners from "./src/ReactSpinners";
+import SWR from "./src/SWR";
 
 
 
@@ -19,4 +20,5 @@ export const router = createBrowserRouter([
   { path: '/ck-editor', element: <CkEditor /> },
   { path: '/sso', element: <SSO /> },
   { path: '/react-spinners', element: <ReactSpinners /> },
+  { path: '/swr', element: <SWR /> },
 ])

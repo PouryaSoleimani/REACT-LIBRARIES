@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 import useSWR from 'swr'
+import axios from 'axios'
 
 type itemType = { id: number, title: string }
 const SWR = () => {
 
   const [products, setProducts] = useState([])
 
-  // function fetcher() { fetch('https://fakestoreapi.com/products').then(response => response.json()).then(result => setProducts(result)) }
-  function fetcher() {
-    
-  }
-  
+  function fetcher() { axios.get('https://fakestoreapi.com/products').then(result => setProducts(result.data)) }
+
   const { error, isLoading } = useSWR('https://fakestoreapi.com/products', fetcher)
 
-  if (error) return <div>failed to load</div>
-  if (isLoading) return <div>loading...</div>
+
+  if (error) return <div className='text-white text-3xl'>failed to load</div>
+  if (isLoading) return <div className='text-white text-3xl'>loading...</div>
 
 
 

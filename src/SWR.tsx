@@ -3,11 +3,13 @@ import useSWR from 'swr'
 
 type itemType = { id: number, title: string }
 const SWR = () => {
+
   const [products, setProducts] = useState([])
+
   function fetcher() { fetch('https://fakestoreapi.com/products').then(response => response.json()).then(result => setProducts(result)) }
-
-
+  
   const { error, isLoading } = useSWR('https://fakestoreapi.com/products', fetcher)
+
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
 

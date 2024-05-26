@@ -5,6 +5,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 import PuffLoader from "react-spinners/PuffLoader";
 import PulseLoader from "react-spinners/PulseLoader";
 import FadeLoader from "react-spinners/FadeLoader";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 // ** TUTORIAL
 // 1 - INSTALL THE PACKAGE

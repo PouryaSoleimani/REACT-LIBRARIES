@@ -1,3 +1,16 @@
 //^ UTILS.JS FILE
+
+//SUM
 const sum = (num1, num2) => { return num1 + num2 }
-module.exports = sum
+
+
+//POWER
+const power = (num1, num2) => { return num1 * num2 }
+
+
+//EXPORTS
+exports.sum = sum
+exports.power = power
+
+
+

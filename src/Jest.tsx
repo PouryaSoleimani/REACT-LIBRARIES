@@ -1,8 +1,11 @@
+//^ JEST PAGE
 import React from 'react'
 
 const Jest = () => {
   return (
-    <div>Jest</div>
+    <div>
+      <h1>JEST PAGE</h1>
+    </div>
   )
 }
 

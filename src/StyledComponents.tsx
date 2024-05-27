@@ -16,7 +16,7 @@ const RejectButton = styled(PrimaryButton)`background-color : darkred; border:10
 
 // GIVING ATTRIBUTES TO THE COMPONENTS
 const DisabledButton = styled(PrimaryButton).attrs({ disabled: true })`color: darkgray ; background-color : #484444;border: 10px solid black; cursor: not-allowed;` // INHERITANCE IN STYLED-COMPONENTS
-
+const YellowButton = styled(PrimaryButton)`background-color : yellow; color: black;`
 
 
 
@@ -38,12 +38,13 @@ const StyledComponents = () => {
           <Circle></Circle>
           <InheritedCircle></InheritedCircle>
         </div>
-        <div className='flex space-x-10 my-6'>
+        <div className='flex space-x-5 my-6 '>
           <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={true}>PRIMARY</PrimaryButton>
           <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={false}>SECONDARY</PrimaryButton>
           <AcceptButton>ACCEPT</AcceptButton>
           <RejectButton>REJECT</RejectButton>
           <DisabledButton>DISABLED</DisabledButton>
+          <YellowButton>YELLOW</YellowButton>
         </div>
 
       </Wrapper>

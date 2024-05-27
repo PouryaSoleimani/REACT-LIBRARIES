@@ -1,7 +1,7 @@
 //^ STYLED-COMPONENTS
 import React from 'react'
 import { PrimaryButton } from './StyledComponents2';
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'; // IMPORT {createGlobalStyle} FOR SETTING A BUNCH OF SETTINGS FOR ALL THE ELEMENTS IN THE PROJECT AND {ThemeProvider} FOR DIFFERENT THEMING
+import styled, { createGlobalStyle } from 'styled-components'; // IMPORT {createGlobalStyle} FOR SETTING A BUNCH OF SETTINGS FOR ALL THE ELEMENTS IN THE PROJECT
 
 
 //^STYLED COMPONENTS
@@ -26,16 +26,12 @@ const YellowButton = styled(PrimaryButton)`background-color : yellow; color: bla
 const GlobalStyles = createGlobalStyle` button{ color:cyan ; background-color:gray ; font-size:30px ; padding : 1rem ; border-radius : 20px ; border : 10px solid cyan; &:hover{background-color : black} };`
 
 // PROVIDING DIFFERENT THEMES
-const Darktheme = {
-  body: '#1c1c1c',
-  title: '#fff'
 
-}
 //^COMPONENT  
 const StyledComponents = () => {
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       {/* FIRST WE MUST PUT THE <GlobalStyles/> TAG IN THE JSX TO IMPLEMENT STYLES TO GLOBAL ELEMENTS */}
       <GlobalStyles />
       <h1 className='bg-pink-400 text-black text-4xl text-center py-6 font-extrabold tracking-tighter w-full'>STYLED COMPONENTS</h1>
@@ -63,9 +59,8 @@ const StyledComponents = () => {
         <div>
           <button>DEFAULT BUTTON</button>
         </div>
-
       </Wrapper>
-    </ThemeProvider>
+    </>
   )
 }
 

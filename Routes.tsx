@@ -11,6 +11,7 @@ import SWR from "./src/SWR";
 import Jest from "./src/JEST/Jest";
 import StyledComponents from "./src/StyledComponents";
 import ThemeToggle from "./src/ThemeToggle";
+import ThemeToggle2 from "./src/ThemeToggle2";
 
 
 
@@ -27,4 +28,5 @@ export const router = createBrowserRouter([
   { path: '/jest', element: <Jest /> },
   { path: '/styled-components', element: <StyledComponents /> },
   { path: '/theme-toggle', element: <ThemeToggle /> },
+  { path: '/theme-toggle-2', element: <ThemeToggle2 /> },
 ])

@@ -9,7 +9,7 @@ export const PrimaryButton = styled.button<{ $outline?: boolean; }>`
  margin-top:20px ; 
  color:${props => props.$outline ? "black" : "white"} ;
  font-weight: bold;
- width:20rem;
+ width:16rem;
  text-align: center;
  border-radius:20px;
  border :10px solid ${props => props.$outline ? "hotpink" : "white"};

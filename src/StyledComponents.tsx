@@ -1,7 +1,7 @@
 //^ STYLED-COMPONENTS
 import React from 'react'
 import styled from 'styled-components';
-
+import { PrimaryButton } from './StyledComponents2';
 
 //STYLED COMPONENTS
 const Title = styled.h1`font-size: 3.5em;text-align: center;color: #124169;font-weight : 900;`
@@ -9,7 +9,6 @@ const Wrapper = styled.section`padding : 4em ;background : #252525 ;display : fl
 const Button = styled.button`background-color : green ; padding : 1rem ;border-radius : 15px ;color : white ;border : 5px solid white ; width : 10rem; font-weight:bold ; font-size:19px;`
 const Text = styled.text`color:white ;font-size : 26px ;margin-top:10px ;font-weight : bold;`
 const Circle = styled.circle`width:110px ; height : 110px ; border-radius : 100%; background-color:red; margin-top:30px; border:12px solid white ;`
-const PrimaryButton = styled.button<{ $primary?: boolean; }>`background-color : ${props => props.$primary ? "white" : 'darkgreen'}; font-size:40px ; margin-top:20px ; color:${props => props.$primary ? "black" : "white"} ; padding:1rem;`
 //COMPONENT  
 const StyledComponents = () => {
 

@@ -8,6 +8,7 @@ import CkEditor from "./src/CkEditorComponent";
 import SSO from "./src/SSO";
 import ReactSpinners from "./src/ReactSpinners";
 import SWR from "./src/SWR";
+import Jest from "./src/Jest";
 
 
 
@@ -21,4 +22,5 @@ export const router = createBrowserRouter([
   { path: '/sso', element: <SSO /> },
   { path: '/react-spinners', element: <ReactSpinners /> },
   { path: '/swr', element: <SWR /> },
+  { path: '/jest', element: <Jest /> },
 ])

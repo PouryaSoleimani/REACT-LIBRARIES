@@ -9,6 +9,7 @@ import SSO from "./src/SSO";
 import ReactSpinners from "./src/ReactSpinners";
 import SWR from "./src/SWR";
 import Jest from "./src/JEST/Jest";
+import StyledComponents from "./src/StyledComponents/StyledComponents";
 
 
 
@@ -23,4 +24,5 @@ export const router = createBrowserRouter([
   { path: '/react-spinners', element: <ReactSpinners /> },
   { path: '/swr', element: <SWR /> },
   { path: '/jest', element: <Jest /> },
+  { path: '/styled-components', element: <StyledComponents /> },
 ])

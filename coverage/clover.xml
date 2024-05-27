@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716824264165" clover="3.2.0">
-  <project timestamp="1716824264166" name="All files">
+<coverage generated="1716824575910" clover="3.2.0">
+  <project timestamp="1716824575911" name="All files">
     <metrics statements="30" coveredstatements="30" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6" elements="42" coveredelements="42" complexity="0" loc="30" ncloc="30" packages="1" files="3" classes="3"/>
     <file name="minus.js" path="C:\Users\RC\OneDrive\Desktop\CODE\REACT\REACT-LIBRARIES\src\JEST\minus.js">
       <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>

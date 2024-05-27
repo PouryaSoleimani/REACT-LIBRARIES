@@ -23,8 +23,8 @@ const StyledComponents = () => {
         <Button>CLICK ME</Button>
         <Text>THIS IS A TESTING TEXT</Text>
         <Circle></Circle>
-        <PrimaryButton $primary={true}>PRIMARY</PrimaryButton>
-        <PrimaryButton $primary={false}>SECONDARY</PrimaryButton>
+        <PrimaryButton $outline={true}>PRIMARY</PrimaryButton>
+        <PrimaryButton $outline={false}>SECONDARY</PrimaryButton>
       </Wrapper>
     </div>
   )

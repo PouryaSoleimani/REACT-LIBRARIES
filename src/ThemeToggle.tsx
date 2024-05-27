@@ -68,7 +68,7 @@ border: 10px solid darkgray;
 const ThemeToggle = () => {
   //STATES
   const [themeToggler, setThemeToggler] = useState(DarkTheme)
-  function toggleTheme(inputTheme : ThemeType) { setThemeToggler(inputTheme) }
+  function toggleTheme(inputTheme: ThemeType) { setThemeToggler(inputTheme) }
 
   return (
     <ThemeProvider theme={themeToggler}>
@@ -76,8 +76,8 @@ const ThemeToggle = () => {
         <Title>HELLO WORLD</Title>
         <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tenetur dignissimos dolore possimus facilis mollitia soluta sequi beatae nisi rem laboriosam aliquam deserunt sit, nemo, nobis explicabo voluptates dolorem pariatur?</Desc>
         <div className='flex items-center justify-center py-10 text-3xl font-bold space-x-6 w-full'>
-          <LightButton onClick={() => toggleTheme(LightTheme)}>LIGHT THEME</LightButton>
-          <DarkButton onClick={() => toggleTheme(DarkTheme)}>DARK THEME</DarkButton>
+          <LightButton onClick={() => toggleTheme(LightTheme)}>☀</LightButton>
+          <DarkButton onClick={() => toggleTheme(DarkTheme)}>🌙</DarkButton>
         </div>
       </Wrapper>
     </ThemeProvider>

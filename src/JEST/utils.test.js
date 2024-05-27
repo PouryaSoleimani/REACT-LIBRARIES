@@ -16,4 +16,5 @@ test('test Clone Function', () => {
   expect(clone(array)).toStrictEqual(array)
   // expect(clone(array)).toEqual(array) --> THIS IS JUST THE SAME AS {toStrictEqual}
   // expect(clone(array)).toBe(array) --> IF WE DIDNT USE THE {SPREAD SYNTAX} [...array] , WE COULD USE THIS
+  // expect(clone(array)).not.toBe(array) --> TO MAKE OUR CONDITION A NEGATIVE CONDITION
 })

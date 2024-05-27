@@ -7,13 +7,13 @@ type InputThemeType = { body: string, header: string, text: string, primary: str
 
 //^ STYLED COMPONENT VARIABLES AND THEMES
 //THEMES
-const DarkTheme = { body: "#303030", header: "#9f9999", text: '#d4d3d3', primary: '#f8e643', }
+const DarkTheme = { body: "#101010", header: "#fff9f9", text: '#d4d3d3', primary: '#f8e643', }
 
 const LightTheme = { body: "#fafafa", header: "#131313", text: "#2e2d2d", primary: "hotpink" }
 
 const Wrapper = styled.section`width : 100% ; height : 100vh ; border : 12px solid ${props => props.theme.primary} ; background-color : ${props => props.theme.body};`
 
-const Header = styled.h1`font-size : 40px ; font-weight : bold ; text-align : center ; color : ${props => props.theme.header};`
+const Header = styled.h1`font-size : 40px ; font-weight : bold ; text-align : center ; color : ${props => props.theme.header}; text-decoration : underline ; text-decoration-color : ${props => props.theme.primary} ; text-decoration-thickness:1rem;`
 
 const Text = styled.p`font-size : 20px; font-weight : 600 ; padding : 1rem 1rem ; margin-top : 20px ; color : ${props => props.theme.text};`
 
@@ -30,8 +30,6 @@ const ThemeToggle2 = () => {
   const [theme, setTheme] = useState(LightTheme)
 
   function themeToggler(inputTheme: InputThemeType) { setTheme(inputTheme) }
-
-
 
 
 

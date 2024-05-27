@@ -20,7 +20,7 @@ const DisabledButton = styled(PrimaryButton).attrs({ disabled: true })`color: da
 const YellowButton = styled(PrimaryButton)`background-color : yellow; color: black;`
 
 // SETTING GLOBAL STYLES
-
+const GlobalStyles = createGlobalStyle` button{ color:cyan ; background-color:gray ; font-size:30px ; padding : 1rem ; border-radius : 20px ; border : 10px solid cyan; &:hover{background-color : black} };`
 
 
 //COMPONENT  
@@ -28,6 +28,8 @@ const StyledComponents = () => {
 
   return (
     <div>
+      {/* FIRST WE MUST PUT THE <GlobalStyles/> TAG IN THE JSX TO IMPLEMENT STYLES TO GLOBAL ELEMENTS */}
+      <GlobalStyles /> 
       <h1 className='bg-pink-400 text-black text-4xl text-center py-6 font-extrabold tracking-tighter w-full'>STYLED COMPONENTS</h1>
       <Wrapper>
         <Title>HELLO WORLD</Title>
@@ -52,7 +54,7 @@ const StyledComponents = () => {
 
         <div>
           <button>DEFAULT BUTTON</button>
-        </div> 
+        </div>
 
       </Wrapper>
     </div>

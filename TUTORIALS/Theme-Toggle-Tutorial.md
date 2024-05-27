@@ -7,4 +7,5 @@
 
 4 - FOURTH we make our own styled Components Like : Wrapper , Title , Text , ...
 
-5 - FIFTH 
+5 - FIFTH we make two Different buttons for DARK and LIGHT theme with 2 different styles
+

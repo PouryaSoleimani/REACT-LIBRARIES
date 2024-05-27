@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle` button{ color:cyan ; background-color:gr
 
 //COMPONENT  
 const StyledComponents = () => {
-
+ 
   return (
     <div>
       {/* FIRST WE MUST PUT THE <GlobalStyles/> TAG IN THE JSX TO IMPLEMENT STYLES TO GLOBAL ELEMENTS */}

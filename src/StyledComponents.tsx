@@ -1,8 +1,8 @@
 //^ STYLED-COMPONENTS
 import React from 'react'
+import { PrimaryButton } from './StyledComponents2';
 import styled, { createGlobalStyle } from 'styled-components'; // IMPORT {createGlobalStyle} FOR SETTING A BUNCH OF SETTINGS FOR ALL THE ELEMENTS IN THE PROJECT
 
-import { PrimaryButton } from './StyledComponents2';
 
 //^STYLED COMPONENTS
 const Title = styled.h1`font-size: 3.5em;text-align: center;color: #124169;font-weight : 900;`
@@ -29,7 +29,7 @@ const StyledComponents = () => {
   return (
     <div>
       {/* FIRST WE MUST PUT THE <GlobalStyles/> TAG IN THE JSX TO IMPLEMENT STYLES TO GLOBAL ELEMENTS */}
-      <GlobalStyles /> 
+      <GlobalStyles />
       <h1 className='bg-pink-400 text-black text-4xl text-center py-6 font-extrabold tracking-tighter w-full'>STYLED COMPONENTS</h1>
       <Wrapper>
         <Title>HELLO WORLD</Title>

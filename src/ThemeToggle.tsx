@@ -7,8 +7,8 @@ type ThemeType = { body: string, title: string, desc: string, border: string }
 //STYLED COMPONENTS AND VARIABLES
 const DarkTheme = {
   body: "#101010",
-  title: "#c5adad",
-  desc: "#615e5e",
+  title: "#e1d3d3",
+  desc: "#a7a3a3",
   border: "white"
 }
 
@@ -64,6 +64,7 @@ padding : 1rem 1rem ;
 border: 10px solid darkgray;
 `
 
+
 //^ COMPONENT
 const ThemeToggle = () => {
   //STATES
@@ -73,7 +74,7 @@ const ThemeToggle = () => {
   return (
     <ThemeProvider theme={themeToggler}>
       <Wrapper>
-        <Title>HELLO WORLD</Title>
+        <Title>THEME TOGGLE</Title>
         <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis tenetur dignissimos dolore possimus facilis mollitia soluta sequi beatae nisi rem laboriosam aliquam deserunt sit, nemo, nobis explicabo voluptates dolorem pariatur?</Desc>
         <div className='flex items-center justify-center py-10 text-3xl font-bold space-x-6 w-full'>
           <LightButton onClick={() => toggleTheme(LightTheme)}>☀</LightButton>

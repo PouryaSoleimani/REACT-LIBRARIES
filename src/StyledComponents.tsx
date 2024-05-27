@@ -22,8 +22,8 @@ const StyledComponents = () => {
       <Wrapper>
         <Title>HELLO WORLD</Title>
         <div className='flex space-x-6'>
-        <Button>CLICK ME</Button>
-        <Button>CLICK ME</Button>
+          <Button>CLICK ME</Button>
+          <Button>CLICK ME</Button>
         </div>
         <Text>THIS IS A TESTING TEXT</Text>
         <div className='flex space-x-6 mt-4'>
@@ -31,9 +31,9 @@ const StyledComponents = () => {
           <InheritedCircle></InheritedCircle>
         </div>
         <div className='flex space-x-10 my-6'>
-        <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={true}>PRIMARY</PrimaryButton>
-        <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={false}>SECONDARY</PrimaryButton>
-        <DisabledButton disabled>DISABLED</DisabledButton>
+          <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={true}>PRIMARY</PrimaryButton>
+          <PrimaryButton onClick={() => console.log('CLICK CLICK')} $outline={false}>SECONDARY</PrimaryButton>
+          <DisabledButton disabled>DISABLED</DisabledButton>
         </div>
       </Wrapper>
     </div>

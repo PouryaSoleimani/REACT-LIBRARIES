@@ -11,13 +11,22 @@ const LightTheme = { body: "#fafafa", header: "#131313", text: "#2e2d2d", primar
 
 const Wrapper = styled.section`width : 100% ; height : 100vh ; border : 12px solid ${props => props.theme.primary} ; background-color : ${props => props.theme.body};`
 
+const Header = styled.h1`font-size : 40px ; font-weight : bold ; text-align : center ; color : ${props => props.theme.header};`
 
+const Text = styled.p`font-size : 20px; font-weight : 600 ; padding : 1rem 1rem ; margin-top : 20px ; color : ${props => props.theme.text};`
 //^ COMPONENT
 const ThemeToggle2 = () => {
   return (
     <ThemeProvider theme={LightTheme}>
       <Wrapper>
-
+        <Header>THEME TOGGLE PAGE</Header>
+        <Text> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, consequuntur dolorem ex sit odit exercitationem ipsa voluptatibus aspernatur quia suscipit alias eum architecto ullam, obcaecati nostrum mollitia tempore molestiae voluptates.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iste quis expedita possimus officiis consectetur delectus quas vitae veritatis placeat, harum ipsa officia aliquid modi vero voluptatum fugit cumque commodi!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iste eveniet minus labore a provident, minima veniam voluptate placeat neque vel beatae, mollitia rerum similique, eos dolorum? Repudiandae, earum incidunt.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sunt excepturi vel rerum natus? Tempore, quasi amet et quae est dignissimos natus iusto eligendi inventore, fugit eos at soluta ducimus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, explicabo unde! Vel omnis unde aliquam quia quidem? At earum a nesciunt, labore, numquam minus quod odit soluta libero iusto explicabo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus, hic provident totam nesciunt beatae saepe maxime consequatur sed ut, quasi quod recusandae tempora dolorum nostrum voluptate praesentium repellat velit.
+        </Text>
       </Wrapper>
     </ThemeProvider>
   )

@@ -3,17 +3,6 @@ import React from 'react'
 
 const Jest = () => {
 
-  function sum(num1: number, num2: number) { return num1 + num2 }
-  module.exports = sum;
-
-
-
-
-
-
-
-
-
   //RETURN
   return (
     <div>

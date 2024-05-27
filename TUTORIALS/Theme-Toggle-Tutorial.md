@@ -6,3 +6,4 @@
 3 - THIRD we define two different themes : `DARKTHEME` and `LIGHTTHEME`
 
 4 - FOURTH we make our own styled Components Like : Wrapper , Title , Text , ...
+

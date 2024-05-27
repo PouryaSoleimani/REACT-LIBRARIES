@@ -5,64 +5,25 @@ import styled, { ThemeProvider } from 'styled-components'
 type ThemeType = { body: string, title: string, desc: string, border: string }
 
 //STYLED COMPONENTS AND VARIABLES
-const DarkTheme = {
-  body: "#101010",
-  title: "#e1d3d3",
-  desc: "#a7a3a3",
-  border: "white"
-}
+const DarkTheme = { body: "#101010", title: "#e1d3d3", desc: "#a7a3a3", border: "white" }
 
 
-const LightTheme = {
-  body: "#fafafa",
-  title: "#black",
-  desc: "#1b1a1a",
-  border: "darkgray"
-}
+const LightTheme = { body: "#fafafa", title: "#black", desc: "#1b1a1a", border: "darkgray" }
 
 
-const Wrapper = styled.section`
-width:100% ;
- height:100vh ;
- border : 15px solid ${props => props.theme.border};
- background-color :${(props) => props.theme.body} ;
- color : ${props => props.theme.title};
- `
+const Wrapper = styled.section`width:100% ;height:100vh ;border : 15px solid ${props => props.theme.border};background-color :${(props) => props.theme.body} ;color : ${props => props.theme.title};`
 
 
-const Title = styled.h1`
-font-size : 40px;
-text-align : center;
-font-weight : bold ;
-padding : 1rem 0;
-`
+const Title = styled.h1`font-size : 40px; text-align : center; font-weight : bold ; padding : 1rem 0;`
 
 
-const Desc = styled.p`
-font-size : 20px ;
-letter-spacing : 1px;
-padding : 0 1rem;
-line-height : 60px;
-color : ${props => props.theme.desc};
-`
+const Desc = styled.p`font-size : 20px ; letter-spacing : 1px; padding : 0 1rem; line-height : 60px; color : ${props => props.theme.desc};`
 
 
-const DarkButton = styled.button`
-background-color : #3b3b3b;
-border-radius : 20px;
-color : white;
-padding : 1rem 1rem ;
-border : 10px solid lightgray;
-`
+const DarkButton = styled.button`background-color : #3b3b3b;border-radius : 20px;color : white;padding : 1rem 1rem ;border : 10px solid lightgray;`
 
 
-const LightButton = styled.button`
-background-color : #fafafa;
-border-radius : 20px;
-color : black;
-padding : 1rem 1rem ;
-border: 10px solid darkgray;
-`
+const LightButton = styled.button`background-color : #fafafa;border-radius : 20px;color : black;padding : 1rem 1rem ;border: 10px solid darkgray;`
 
 
 //^ COMPONENT

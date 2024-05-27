@@ -19,9 +19,9 @@ const Text = styled.p`font-size : 20px; font-weight : 600 ; padding : 1rem 1rem 
 
 const ButtonParent = styled.div`display : flex ; align-items : center ; justify-content : center; gap : 3rem; width:100%; padding : 3rem;`
 
-const DarkButton = styled.button`padding: 1rem; background-color: black ; border-radius : 30px; font-weight : bold ; font-size : 30px ; border : 17px solid #f8e643;`
+const DarkButton = styled.button`padding: 1rem; background-color: black ; border-radius : 10px; font-weight : bold ; font-size : 30px ; border : 10px solid #f8e643;`
 
-const LightButton = styled.button`padding : 1rem ; background-color : white ; border-radius : 30px; font-weight : bold ; font-size : 30px ; border : 17px solid hotpink;`
+const LightButton = styled.button`padding : 1rem ; background-color : white ; border-radius : 10px; font-weight : bold ; font-size : 30px ; border : 10px solid hotpink;`
 
 
 //^ COMPONENT

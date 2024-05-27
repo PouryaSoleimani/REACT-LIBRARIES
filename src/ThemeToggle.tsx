@@ -17,14 +17,14 @@ const LightTheme = {
   body: "#fafafa",
   title: "#black",
   desc: "#1b1a1a",
-  border: "black"
+  border: "darkgray"
 }
 
 
 const Wrapper = styled.section`
 width:100% ;
  height:100vh ;
- border : 5px solid ${props => props.theme.border};
+ border : 15px solid ${props => props.theme.border};
  background-color :${(props) => props.theme.body} ;
  color : ${props => props.theme.title};
  `
@@ -52,7 +52,7 @@ background-color : #3b3b3b;
 border-radius : 20px;
 color : white;
 padding : 1rem 1rem ;
-border : 10px solid white;
+border : 10px solid lightgray;
 `
 
 
@@ -61,7 +61,7 @@ background-color : #fafafa;
 border-radius : 20px;
 color : black;
 padding : 1rem 1rem ;
-border: 10px solid black;
+border: 10px solid darkgray;
 `
 
 //^ COMPONENT

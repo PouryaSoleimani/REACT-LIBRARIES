@@ -1,7 +1,9 @@
 //^ THEME TOGGLER 2
 import React, { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
-type InputTheme = { body: string, header: string, text: string, primary: string }
+
+// INPUT THEME TYPE
+type InputThemeType = { body: string, header: string, text: string, primary: string }
 
 //^ STYLED COMPONENT VARIABLES AND THEMES
 //THEMES
@@ -26,7 +28,14 @@ const LightButton = styled.button`padding : 1rem ; background-color : white ; bo
 const ThemeToggle2 = () => {
   //STATES AND FUNCTIONS FOR THEME TOGGLING
   const [theme, setTheme] = useState(LightTheme)
-  function themeToggler(inputTheme) { setTheme(inputTheme) }
+
+  function themeToggler(inputTheme: InputThemeType) { setTheme(inputTheme) }
+
+
+
+
+
+  // RETURN
   return (
     <ThemeProvider theme={theme}>
       <Wrapper>
@@ -39,8 +48,8 @@ const ThemeToggle2 = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus, hic provident totam nesciunt beatae saepe maxime consequatur sed ut, quasi quod recusandae tempora dolorum nostrum voluptate praesentium repellat velit.
         </Text>
         <ButtonParent>
-          <LightButton>☀</LightButton>
-          <DarkButton>🌙</DarkButton>
+          <LightButton onClick={() => themeToggler(LightTheme)}>☀</LightButton>
+          <DarkButton onClick={() => themeToggler(DarkTheme)}>🌙</DarkButton>
         </ButtonParent>
       </Wrapper>
     </ThemeProvider>

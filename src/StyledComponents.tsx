@@ -45,8 +45,7 @@ const StyledComponents = () => {
           <RejectButton>REJECT</RejectButton>
           <DisabledButton>DISABLED</DisabledButton>
         </div>
-        <PrimaryButton as='a' href='/'>LINK</PrimaryButton>
-      
+
       </Wrapper>
     </div>
   )

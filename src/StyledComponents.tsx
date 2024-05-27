@@ -1,6 +1,7 @@
 //^ STYLED-COMPONENTS
 import React from 'react'
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components'; // IMPORT {createGlobalStyle} FOR SETTING A BUNCH OF SETTINGS FOR ALL THE ELEMENTS IN THE PROJECT
+
 import { PrimaryButton } from './StyledComponents2';
 
 //^STYLED COMPONENTS
@@ -51,7 +52,7 @@ const StyledComponents = () => {
 
         <div>
           <button>DEFAULT BUTTON</button>
-        </div>
+        </div> 
 
       </Wrapper>
     </div>

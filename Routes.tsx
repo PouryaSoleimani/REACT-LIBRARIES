@@ -9,7 +9,7 @@ import SSO from "./src/SSO";
 import ReactSpinners from "./src/ReactSpinners";
 import SWR from "./src/SWR";
 import Jest from "./src/JEST/Jest";
-import StyledComponents from "./src/StyledComponents/StyledComponents";
+import StyledComponents from "./src/StyledComponents";
 
 
 

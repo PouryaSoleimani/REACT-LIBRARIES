@@ -10,6 +10,7 @@ import ReactSpinners from "./src/ReactSpinners";
 import SWR from "./src/SWR";
 import Jest from "./src/JEST/Jest";
 import StyledComponents from "./src/StyledComponents";
+import ThemeToggle from "./src/ThemeToggle";
 
 
 
@@ -25,4 +26,5 @@ export const router = createBrowserRouter([
   { path: '/swr', element: <SWR /> },
   { path: '/jest', element: <Jest /> },
   { path: '/styled-components', element: <StyledComponents /> },
+  { path: '/theme-toggle', element: <ThemeToggle /> },
 ])

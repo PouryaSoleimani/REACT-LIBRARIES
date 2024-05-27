@@ -22,4 +22,4 @@ const Jest = () => {
   )
 }
 
-export default Jestmodule.exports = sum;
+export default Jest

@@ -8,7 +8,7 @@ import CkEditor from "./src/CkEditorComponent";
 import SSO from "./src/SSO";
 import ReactSpinners from "./src/ReactSpinners";
 import SWR from "./src/SWR";
-import Jest from "./src/Jest";
+import Jest from "./src/JEST/Jest";
 
 
 

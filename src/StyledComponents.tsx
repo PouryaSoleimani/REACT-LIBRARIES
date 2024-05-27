@@ -18,6 +18,8 @@ const RejectButton = styled(PrimaryButton)`background-color : darkred; border:10
 const DisabledButton = styled(PrimaryButton).attrs({ disabled: true })`color: darkgray ; background-color : #484444;border: 10px solid black; cursor: not-allowed;` // INHERITANCE IN STYLED-COMPONENTS
 const YellowButton = styled(PrimaryButton)`background-color : yellow; color: black;`
 
+// SETTING GLOBAL STYLES
+
 
 
 //COMPONENT  
@@ -45,6 +47,10 @@ const StyledComponents = () => {
           <RejectButton>REJECT</RejectButton>
           <DisabledButton>DISABLED</DisabledButton>
           <YellowButton>YELLOW</YellowButton>
+        </div>
+
+        <div>
+          <button>DEFAULT BUTTON</button>
         </div>
 
       </Wrapper>

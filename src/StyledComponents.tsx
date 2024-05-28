@@ -25,7 +25,7 @@ const YellowButton = styled(PrimaryButton)`background-color : yellow; color: bla
 // SETTING GLOBAL STYLES
 const GlobalStyles = createGlobalStyle` button{ color:cyan ; background-color:gray ; font-size:30px ; padding : 1rem ; border-radius : 20px ; border : 10px solid cyan; &:hover{background-color : black} };`
 
-// PROVIDING DIFFERENT THEMES
+
 
 //^COMPONENT  
 const StyledComponents = () => {

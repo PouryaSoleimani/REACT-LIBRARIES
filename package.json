@@ -21,6 +21,7 @@
     "@react-oauth/google": "^0.12.1",
     "@types/node": "^20.12.12",
     "axios": "^1.7.2",
+    "json-server": "^1.0.0-beta.0",
     "localforage": "^1.10.0",
     "lodash": "^4.17.21",
     "match-sorter": "^6.3.4",

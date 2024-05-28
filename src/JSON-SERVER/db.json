@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "SHOE",
+      "price": 100
+    },
+    {
+      "id": "2",
+      "title": "T-SHIRT",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "T-SHIRT",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "T-SHIRT",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "T-SHIRT",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "T-SHIRT",
+      "views": 200
+    }
+  ]
+}

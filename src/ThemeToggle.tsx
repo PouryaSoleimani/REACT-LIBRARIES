@@ -15,14 +15,15 @@ const Title = styled.h1`font-size : 40px; text-align : center; font-weight : bol
 
 const Desc = styled.p`font-size : 20px ; letter-spacing : 1px; padding : 0 1rem; line-height : 60px; color : ${props => props.theme.desc};`
 
-const DarkButton = styled.button`background-color : #3b3b3b;border-radius : 20px;color : white;padding : 1rem 1rem ;border : 10px solid lightgray;`
+const DarkButton = styled.button`background-color : #3b3b3b;border-radius : 100%;color : white;padding : 1rem 1rem ;border : 3px solid lightgray;`
 
-const LightButton = styled.button`background-color : #fafafa;border-radius : 20px;color : black;padding : 1rem 1rem ;border: 10px solid darkgray;`
+const LightButton = styled.button`background-color : #fafafa;border-radius : 100%;color : black;padding : 1rem 1rem ;border: 3px solid darkgray;`
 
 //^ COMPONENT
 const ThemeToggle = () => {
   //STATES
   const [themeToggler, setThemeToggler] = useState(DarkTheme)
+
   function toggleTheme(inputTheme: ThemeType) { setThemeToggler(inputTheme) }
 
   return (

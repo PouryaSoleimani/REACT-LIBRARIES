@@ -13,6 +13,7 @@ import StyledComponents from "./src/StyledComponents";
 import ThemeToggle from "./src/ThemeToggle";
 import ThemeToggle2 from "./src/ThemeToggle2";
 import StyledComponents3 from "./src/StyledComponents3";
+import JsonServer from "./src/JSON-SERVER/JsonServer";
 
 
 
@@ -31,4 +32,5 @@ export const router = createBrowserRouter([
   { path: '/styled-components-3', element: <StyledComponents3 /> },
   { path: '/theme-toggle', element: <ThemeToggle /> },
   { path: '/theme-toggle-2', element: <ThemeToggle2 /> },
+  { path: '/json-server', element: <JsonServer /> },
 ])

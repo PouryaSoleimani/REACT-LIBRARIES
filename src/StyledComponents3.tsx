@@ -1,6 +1,9 @@
 //^ STYLED COMPONENTS 3 PAGE
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+
+//TYPES
+type InputThemeType = { body: string, title: string, text: string }
 
 //STYLED COMPONENTS
 const Wrapper = styled.div`display : flex ; flex-direction : column ; justify-content : start ; align-items : center ; gap : 1rem ; padding : .2rem ; border:10px solid lightsalmon; width : 100% ; height : 100vh; background-color : ${props => props.theme.body};`
@@ -15,19 +18,21 @@ const DisabledButton = styled(AcceptButton).attrs({ disabled: true })`background
 const GlobalStyles = createGlobalStyle`button { border : 7px solid ${props => props.theme.title} ; border-radius : 20px;}`
 
 // THEMING
-const DarkTheme = { body: "#202020", title: '#fafafa', text: 'lightgray' }
+const DarkTheme = { body: "#202020", title: '#7a7777', text: 'lightgray' }
 const LightTheme = { body: "#fafafa", title: '#202020', text: 'black' }
 
+const LightButton = styled(AcceptButton)`background-color:#cdcaca; padding:.5rem; width : 5rem;`
+const DarkButton = styled(AcceptButton)`background-color :#101010; padding:.5rem; width : 5rem;`
 
 
 //COMPONENT
 const StyledComponents3 = () => {
+  const [theme, setTheme] = useState(LightTheme)
+  function themeToggler(inputTheme: InputThemeType) { setTheme(inputTheme) }
 
 
-
-  
   return (
-    <ThemeProvider theme={LightTheme}>
+    <ThemeProvider theme={theme}>
 
       <Wrapper>
         <GlobalStyles />
@@ -41,6 +46,11 @@ const StyledComponents3 = () => {
           <AcceptButton>Accept</AcceptButton>
           <RejectButton>Reject</RejectButton>
           <DisabledButton>Disabled</DisabledButton>
+        </ButtonsParent>
+
+        <ButtonsParent>
+          <LightButton onClick={() => setTheme(LightTheme)}>☀</LightButton>
+          <DarkButton onClick={() => setTheme(DarkTheme)}>🌙</DarkButton>
         </ButtonsParent>
 
       </Wrapper>

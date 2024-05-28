@@ -1,4 +1,4 @@
-//^ STYLED-COMPONENTS
+//^ STYLED-COMPONENTS PAGE
 import React from 'react'
 import { PrimaryButton } from './StyledComponents2';
 import styled, { createGlobalStyle } from 'styled-components'; // IMPORT {createGlobalStyle} FOR SETTING A BUNCH OF SETTINGS FOR ALL THE ELEMENTS IN THE PROJECT
@@ -6,7 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components'; // IMPORT {create
 
 //^STYLED COMPONENTS
 // BASIC USAGE OF STYLED-COMPONENTS
-const Title = styled.h1`font-size: 3.5em;text-align: center;color: #124169;font-weight : 900;`
+const Title = styled.h1`font-size: 3.5em;text-align: center;color: #3277b4;font-weight : 900;`
 const Wrapper = styled.section`padding : .5em ;background : #252525 ;display : flex ; flex-direction:column ; justify-content : start ; align-items : center; `
 const Button = styled.button`background-color : green ; padding : .5rem ;border-radius : 15px ;color : white ;border : 10px solid black ; font-weight:bold ; font-size:19px; margin-top:10px;`
 const Text = styled.text`color:white ;font-size : 26px ;margin-top:10px ;font-weight : bold;`

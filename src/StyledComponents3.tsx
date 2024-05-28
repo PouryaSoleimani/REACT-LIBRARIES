@@ -12,7 +12,7 @@ const RejectButton = styled(AcceptButton)`background-color : darkred;`
 const DisabledButton = styled(AcceptButton).attrs({ disabled: true })`background-color:gray ; color : darkgray ; cursor: not-allowed;`
 
 //GLOBAL STYLES
-const GlobalStyles = createGlobalStyle`button { border : 10px solid white ; border-radius : 20px;}`
+const GlobalStyles = createGlobalStyle`button { border : 7px solid white ; border-radius : 20px;}`
 
 
 
@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`button { border : 10px solid white ; bord
 const StyledComponents3 = () => {
   return (
     <Wrapper>
+      <GlobalStyles />
       <Header>STYLED COMPONENTS</Header>
 
       <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam consequuntur eaque modi ratione dolorem libero neque. Ad recusandae, sequi totam, voluptatibus atque quaerat dolorum consequuntur id laboriosam harum, voluptas quas.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique esse eius amet quidem ducimus placeat qui sint iste hic inventore laboriosam, nesciunt iusto magnam excepturi libero in illo repellendus praesentium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quisquam adipisci tempore debitis eum reiciendis, iste alias voluptatem sit. Repudiandae a exercitationem dolorem dignissimos voluptatum quidem optio quas provident dolores.

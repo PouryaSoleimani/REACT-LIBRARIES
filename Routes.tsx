@@ -12,6 +12,7 @@ import Jest from "./src/JEST/Jest";
 import StyledComponents from "./src/StyledComponents";
 import ThemeToggle from "./src/ThemeToggle";
 import ThemeToggle2 from "./src/ThemeToggle2";
+import StyledComponents3 from "./src/StyledComponents3";
 
 
 
@@ -27,6 +28,7 @@ export const router = createBrowserRouter([
   { path: '/swr', element: <SWR /> },
   { path: '/jest', element: <Jest /> },
   { path: '/styled-components', element: <StyledComponents /> },
+  { path: '/styled-components-3', element: <StyledComponents3 /> },
   { path: '/theme-toggle', element: <ThemeToggle /> },
   { path: '/theme-toggle-2', element: <ThemeToggle2 /> },
 ])

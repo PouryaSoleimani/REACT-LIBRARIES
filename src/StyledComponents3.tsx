@@ -1,8 +1,14 @@
+//^ STYLED COMPONENTS 3 PAGE
 import React from 'react'
+import styled from 'styled-components'
 
+
+//COMPONENT
 const StyledComponents3 = () => {
   return (
-    <div>StyledComponents3</div>
+    <div>
+      
+    </div>
   )
 }
 

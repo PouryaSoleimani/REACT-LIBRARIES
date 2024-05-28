@@ -9,6 +9,8 @@ const Text = styled.p`color : lightgray ; font-size : 22px ; padding : .2rem 2re
 const ButtonsParent = styled.div`display : flex ; justify-content : center ; align-items : center ; gap : 2rem ; margin-top : 3rem;`
 const AcceptButton = styled.button`padding : .2rem 2rem ; width: 15rem; background-color : green ; font-size :24px ; font-weight : bold ; border-radius : 15px ;border : 5px solid currentColor; color : white; &:hover{transform : scale(1.2)}; transition : all 300ms linear;`
 const RejectButton = styled(AcceptButton)`background-color : darkred;`
+const DisabledButton = styled(AcceptButton).attrs({ disabled: true })`background-color:gray ; color : darkgray ; cursor: not-allowed;`
+
 //COMPONENT
 const StyledComponents3 = () => {
   return (
@@ -22,6 +24,7 @@ const StyledComponents3 = () => {
       <ButtonsParent>
         <AcceptButton>Accept</AcceptButton>
         <RejectButton>Reject</RejectButton>
+        <DisabledButton>Disabled</DisabledButton>
       </ButtonsParent>
 
     </Wrapper>

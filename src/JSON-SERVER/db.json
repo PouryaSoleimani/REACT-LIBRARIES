@@ -8,47 +8,47 @@
     {
       "id": "2",
       "title": "T-SHIRT",
-      "views": 200
+      "price": 200
     },
     {
       "id": "3",
       "title": "PANTS",
-      "views": 300
+      "price": 300
     },
     {
       "id": "4",
       "title": "SHORT",
-      "views": 400
+      "price": 400
     },
     {
       "id": "5",
       "title": "HOODY",
-      "views": 500
+      "price": 500
     },
     {
       "id": "6",
       "title": "JACKET",
-      "views": 600
+      "price": 600
     },
     {
       "id": "7",
       "title": "BAG",
-      "views": 700
+      "price": 700
     },
     {
       "id": "8",
       "title": "GLASSES",
-      "views": 800
+      "price": 800
     },
     {
       "id": "9",
       "title": "CAP",
-      "views": 900
+      "price": 900
     },
     {
       "id": "10",
       "title": "GLOVES",
-      "views": 1000
+      "price": 1000
     }
   ]
 }

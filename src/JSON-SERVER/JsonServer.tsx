@@ -31,7 +31,7 @@ const JsonServer = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
-  const notify = () => toast.success('User Created');
+  const notify = () => toast.success('User Created', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime" } })
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -46,7 +46,7 @@ const JsonServer = () => {
   return (
     <Wrapper>
       <Toaster position="top-right" reverseOrder={true} />
-      
+
       <PageTitle>JSON SERVER</PageTitle>
       <DatasWrapper>
         {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}

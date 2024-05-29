@@ -30,4 +30,5 @@
   
 
 <!--! 7 - POSTING DATAS TO JSON-SERVER -->
-
+- to send a post request for creating or adding things such as `USERS` , `PRODUCTS` and etc. we must send a regulare POST request to our api like : `POST /localhost:3000/users` 
+- our request must contain an object including the datas we want we the same names of our database names : { id : 2 , firstName : '' , lastName : '' }

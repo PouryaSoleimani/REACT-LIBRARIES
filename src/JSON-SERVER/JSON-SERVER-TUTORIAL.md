@@ -21,4 +21,13 @@
 <!--^ 4 - RELATIONS BETWEEN DATAS :  -->
 - to access datas that are connected and related to another data array or something like this : 1 - we can use filter : `GET /comments?productId=2` or we can use `EMDED` : `GET /products?emded=product` == This well return the comments which are for products 
 
-5 - 
+
+<!--^ 5 - USING REMOTE SCHEMAS -->
+- in order to use a `REMOTE SCHEMA` we must just `pass the specific URL` to JSON-SERVER , when we want to start it , like :  `json-server http://fakestoreapi.com/products` , and our JSON-SERVER is connected to an external database
+
+<!--^ 6 - CHANGING THE PORTS OF JSON-SERVER  -->
+- JSON-SERVER by default runns on `http://localhost:3000` , if we want to change it , we must only use the `--port` OR `-p` flag , like : `json-server db.json -p 4000` , now it runs on `http://localhost:4000`
+  
+
+<!--! 7 - POSTING DATAS TO JSON-SERVER -->
+

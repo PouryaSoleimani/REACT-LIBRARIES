@@ -31,7 +31,7 @@ const JsonServer = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
-  const notify = () => toast.success('User Created', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime" } })
+  const notify = () => toast.success('User Created', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()

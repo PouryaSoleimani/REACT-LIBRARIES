@@ -16,7 +16,7 @@ const JsonServer = () => {
 
   const [products, setProducts] = useState([])
 
-  function fetcher() { axios.get('http://localhost:3000/products?_sort=ids&_order=asc').then(response => setProducts(response.data)) }
+  function fetcher() { axios.get('http://localhost:3000/products?_sort=prices,-price').then(response => setProducts(response.data)) }
 
   useEffect(() => { fetcher() }, [])
 

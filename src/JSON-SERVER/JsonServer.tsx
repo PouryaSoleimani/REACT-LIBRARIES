@@ -10,6 +10,7 @@ const PageTitle = styled.h1`text-align : center ; font-size : 30px ; color : lim
 const DatasWrapper = styled(Wrapper)`width : 100% ; padding : .5rem 1rem; display : flex ; flex-direction : column ; align-items : start ; justify-content : start; border-bottom : 10px solid white;`
 const Product = styled.p`font-size:22px ; color : #e1e1e1; line-height:40px; font-weight : 800;`
 const FormWrapper = styled.div`display:flex ; align-items: center;justify-content : center ; padding : 20rem ; border-bottom : 10px solid white;`
+const Form = styled.form`display : flex ; flex-direction : column ; align-items:center ; justify-content : start; padding : 1rem; border : 5px solid lime ; border-radius : 20px;`
 
 // COMPONENT ===============================================================================================================================================
 const JsonServer = () => {
@@ -26,7 +27,10 @@ const JsonServer = () => {
       <DatasWrapper>
         {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}
       </DatasWrapper>
-<Form
+
+      <FormWrapper>
+
+      </FormWrapper>
     </Wrapper>
   )
 }

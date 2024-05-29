@@ -37,7 +37,7 @@ const JsonServer = () => {
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const userInfo = { id: Number(id), firstName, lastName }
+    const userInfo = {firstName, lastName }
     axios.post('http://localhost:3000/users', userInfo).then(response => console.log(response))
     notify()
     setFirstName(''); setLastName('')

@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import useSWR from 'swr'
 type ProductItemType = { id: string, title: string, price: number }
 
 //STYLED COMPONENTS ========================================================================================================================================

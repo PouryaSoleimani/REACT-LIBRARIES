@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "server" : "json-server ./src/JSON-SERVER/db.json "
+
   },
   "dependencies": {
     "@ckeditor/ckeditor5-basic-styles": "^41.4.2",

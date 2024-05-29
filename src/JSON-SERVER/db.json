@@ -67,5 +67,12 @@
       "body": "NOT BAD",
       "productId": 4
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Alireza",
+      "lastName": "Mohammadi"
+    }
   ]
 }

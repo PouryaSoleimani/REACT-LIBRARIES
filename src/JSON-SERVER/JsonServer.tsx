@@ -54,7 +54,7 @@ const JsonServer = () => {
 
   function deleteUserHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    axios.delete(`http://localhost:3000/users/${id}`)
+    axios.delete(`http://localhost:3000/users/ ${id}`)
       .then(response => { console.log(response); notify2() })
       .catch(error => notify3())
     setId('')

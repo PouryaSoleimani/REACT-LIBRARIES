@@ -34,4 +34,5 @@
 - our request must contain an object including the datas we want we the same names of our database names : `{ id : 2 , firstName : '' , lastName : '' }`
 
 <!--! 8 - DELETING DATAS FROM JSON SERVER DATABASE -->
--
+- just send a request to the api white `DELETE` method and send the id you want to delete to it :))
+- 

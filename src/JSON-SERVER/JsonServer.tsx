@@ -26,14 +26,14 @@ const JsonServer = () => {
 
   useEffect(() => { fetcher() }, [])
 
-  // FORM STATES
+  // FORM 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const userInfo = { firstName, lastName }
-    axios.post('http://localhost:3000/users', userInfo)
+    axios.post('http://localhost:3000/users', userInfo).then(response =>console.log(response))
     setFirstName(''); setLastName('')
   }
 

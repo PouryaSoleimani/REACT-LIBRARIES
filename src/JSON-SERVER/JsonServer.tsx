@@ -29,7 +29,7 @@ const JsonServer = () => {
 
   useEffect(() => { fetcher() }, [])
 
-  // FORM - {POST}
+  //* FORM - {POST}
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
@@ -37,13 +37,16 @@ const JsonServer = () => {
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const userInfo = { firstName, lastName }
+    let id = 1
+    const userInfo = { id: ++id, firstName, lastName }
     axios.post('http://localhost:3000/users', userInfo).then(response => console.log(response))
     notify()
     setFirstName(''); setLastName('')
   }
 
-  // FORM - {DELETE}
+
+
+  //! FORM - {DELETE}
   const [id, setId] = useState('')
   const [name, setName] = useState('')
 

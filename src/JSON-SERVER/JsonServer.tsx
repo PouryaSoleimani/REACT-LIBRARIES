@@ -26,7 +26,7 @@ const JsonServer = () => {
       <DatasWrapper>
         {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}
       </DatasWrapper>
-
+<Form
     </Wrapper>
   )
 }

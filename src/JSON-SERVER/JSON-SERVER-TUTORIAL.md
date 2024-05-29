@@ -7,3 +7,6 @@
 
 2 - FILTERING DATAS : 
 - you can read the document of {JSON SERVER} in its github page
+- to filter datas you can use (?) sign in the {REQUEST URL} , like --> GET /posts?views_gt=9000 == it will gives the post that their {views} are `Greater Than` 9000
+- you can also set the _start , _end and _limit flags in the URL to see filtered results --> GET /posts?_start=10&_end=20 
+- and also you can filter your URL for getting only one or maybe more responses --> 

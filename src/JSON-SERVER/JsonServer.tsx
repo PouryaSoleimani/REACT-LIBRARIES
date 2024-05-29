@@ -45,20 +45,21 @@ const JsonServer = () => {
 
   // FORM - {DELETE}
   const [id, setId] = useState('')
+  const [name, setName] = useState('')
 
-  const notify2 = () => toast.error('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
+  const notify2 = () => toast.success('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
+  const notify3 = () => toast.error('User Not Found', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
 
   function deleteUserHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     axios.delete(`http://localhost:3000/users/${id}`)
-      .then(response => {
-        console.log(response);
-        if (response.status === 200) { notify2() }
-      }
-      )
-
-
+      .then(response => { console.log(response); notify2() })
+      .catch(error => notify3())
+    setId('')
   }
+
+
+
 
   return (
     <Wrapper>
@@ -81,7 +82,7 @@ const JsonServer = () => {
       <FormWrapper>
         <DeleteForm onSubmit={deleteUserHandler}>
           <DeleteFormTitle>DELETE USER</DeleteFormTitle>
-          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='User ID' value={id} onChange={event => setId(event.target.value)} />
+          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='User Name' value={id} onChange={event => setId(event.target.value)} />
           <DeleteButton>SUBMIT</DeleteButton>
         </DeleteForm>
       </FormWrapper>

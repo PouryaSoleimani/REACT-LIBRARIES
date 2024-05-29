@@ -7,7 +7,7 @@ type ProductItemType = { id: string, title: string, price: number }
 //STYLED COMPONENTS ========================================================================================================================================
 const Wrapper = styled.div`display : flex ; align-items : center ; justify-content : center ; flex-direction : column ;`
 const PageTitle = styled.h1`text-align : center ; font-size : 30px ; color : lime ; border-bottom : 10px solid lime ; background-color : #202020 ; padding : 1rem; width : 100%; font-weight : bold;`
-const DatasWrapper = styled(Wrapper)`width : 100% ; height : 90vh ; padding : .5rem 1rem; display : flex ; flex-direction : column ; align-items : start ; justify-content : start;`
+const DatasWrapper = styled(Wrapper)`width : 100% ; padding : .5rem 1rem; display : flex ; flex-direction : column ; align-items : start ; justify-content : start; border-bottom : 10px solid white;`
 const Product = styled.p`font-size:22px ; color : #e1e1e1; line-height:40px; font-weight : 800;`
 
 

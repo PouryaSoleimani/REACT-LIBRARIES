@@ -29,6 +29,9 @@
 - JSON-SERVER by default runns on `http://localhost:3000` , if we want to change it , we must only use the `--port` OR `-p` flag , like : `json-server db.json -p 4000` , now it runs on `http://localhost:4000`
   
 
-<!--! 7 - POSTING DATAS TO JSON-SERVER -->
+<!--! 7 - POSTING DATAS TO JSON-SERVER DATABASE -->
 - to send a post request for creating or adding things such as `USERS` , `PRODUCTS` and etc. we must send a regulare POST request to our api like : `POST /localhost:3000/users` 
-- our request must contain an object including the datas we want we the same names of our database names : { id : 2 , firstName : '' , lastName : '' }
+- our request must contain an object including the datas we want we the same names of our database names : `{ id : 2 , firstName : '' , lastName : '' }`
+
+<!--! 8 - DELETING DATAS FROM JSON SERVER DATABASE -->
+-

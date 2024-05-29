@@ -16,7 +16,9 @@ const Form = styled.form`display : flex ; flex-direction : column ; align-items:
 const FormTitle = styled(PageTitle)`border-radius : 20px;`
 const Button = styled.button`padding : 1rem 2rem; border-radius : 20px ; border: 5px solid lime ; background-color : #202020; color : white ; font-size : 26px; font-weight : 900;`
 
-
+const DeleteForm = styled(Form)`border : 5px solid red; `
+const DeleteFormTitle = styled(FormTitle)`border-radius : 20px; color : red; border-bottom : 10px solid red;`
+const DeleteButton = styled(Button)`border : 5px solid red;`
 
 // COMPONENT ===============================================================================================================================================
 const JsonServer = () => {
@@ -27,7 +29,7 @@ const JsonServer = () => {
 
   useEffect(() => { fetcher() }, [])
 
-  // FORM 
+  // FORM - {POST}
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
@@ -41,7 +43,22 @@ const JsonServer = () => {
     setFirstName(''); setLastName('')
   }
 
+  // FORM - {DELETE}
+  const [id, setId] = useState('')
 
+  const notify2 = () => toast.error('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
+
+  function deleteUserHandler(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    axios.delete(`http://localhost:3000/users/${id}`)
+      .then(response => {
+        console.log(response);
+        if (response.status === 200) { notify2() }
+      }
+      )
+
+
+  }
 
   return (
     <Wrapper>
@@ -54,11 +71,19 @@ const JsonServer = () => {
 
       <FormWrapper>
         <Form onSubmit={submitHandler}>
-          <FormTitle>FORM</FormTitle>
+          <FormTitle>ADD USER</FormTitle>
           <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='First Name' value={firstName} onChange={event => setFirstName(event.target.value)} />
           <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='Last Name' value={lastName} onChange={event => setLastName(event.target.value)} />
           <Button>SUBMIT</Button>
         </Form>
+      </FormWrapper>
+
+      <FormWrapper>
+        <DeleteForm onSubmit={deleteUserHandler}>
+          <DeleteFormTitle>DELETE USER</DeleteFormTitle>
+          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='User ID' value={id} onChange={event => setId(event.target.value)} />
+          <DeleteButton>SUBMIT</DeleteButton>
+        </DeleteForm>
       </FormWrapper>
 
     </Wrapper>

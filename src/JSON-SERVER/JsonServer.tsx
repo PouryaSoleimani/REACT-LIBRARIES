@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import toast, { Toaster } from 'react-hot-toast';
 type ProductItemType = { id: string, title: string, price: number }
 
 //STYLED COMPONENTS ========================================================================================================================================
@@ -30,10 +31,13 @@ const JsonServer = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
 
+  const notify = () => toast.success('User Created');
+
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const userInfo = { firstName, lastName }
-    axios.post('http://localhost:3000/users', userInfo).then(response =>console.log(response))
+    axios.post('http://localhost:3000/users', userInfo).then(response => console.log(response))
+    notify()
     setFirstName(''); setLastName('')
   }
 
@@ -41,7 +45,8 @@ const JsonServer = () => {
 
   return (
     <Wrapper>
-
+      <Toaster position="top-right" reverseOrder={true} />
+      
       <PageTitle>JSON SERVER</PageTitle>
       <DatasWrapper>
         {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}

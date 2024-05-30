@@ -24,7 +24,7 @@ const DeleteForm = styled(Form)`border : 5px solid red; `
 const DeleteFormTitle = styled(FormTitle)`border-radius : 20px; color : red; border-bottom : 10px solid red;`
 const DeleteButton = styled(Button)`border : 5px solid red;`
 
-// COMPONENT ===============================================================================================================================================
+//^ COMPONENT ===============================================================================================================================================
 const JsonServer = () => {
 
   const [products, setProducts] = useState([])  
@@ -55,16 +55,15 @@ const JsonServer = () => {
 
   //! FORM - {DELETE}
   const [id, setId] = useState('')
-  const [name, setName] = useState('')
   const [allusers, setAllusers] = useState([])
-  useEffect(() => { getAllUsers() }, [allusers])
-
-
+  
   function getAllUsers() { axios.get('http://localhost:3000/users').then(response => setAllusers(response.data)) }
+
+  useEffect(() => { getAllUsers() }, [allusers])
 
   function deleteUserHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    axios.delete(`http://localhost:3000/users/ ${id}`)
+    axios.delete(`http://localhost:3000/users/${id}`)
       .then(response => { console.log(response); notify2() })
       .catch(error => notify3())
     setId('')
@@ -85,6 +84,7 @@ const JsonServer = () => {
       <Toaster position="top-right" reverseOrder={true} />
 
       <PageTitle>JSON SERVER</PageTitle>
+      
       <DatasWrapper>
         {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}
       </DatasWrapper>

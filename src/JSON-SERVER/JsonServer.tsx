@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import toast, { Toaster } from 'react-hot-toast';
 
+//TYPES
 type ProductItemType = { id: string, title: string, price: number }
 type UserType = { id: string | number, firstName: string, lastName: string, bold: false }
 type UserIdType = string | number
@@ -26,7 +27,7 @@ const DeleteButton = styled(Button)`border : 5px solid red;`
 // COMPONENT ===============================================================================================================================================
 const JsonServer = () => {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([])  
 
   function fetcher() { axios.get('http://localhost:3000/products?_sort=prices,-price').then(response => setProducts(response.data)) }
 

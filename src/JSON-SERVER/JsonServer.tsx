@@ -8,7 +8,7 @@ type ProductItemType = { id: string, title: string, price: number }
 type UserType = { id: string | number, firstName: string, lastName: string, bold: false }
 type UserIdType = string | number
 
-//STYLED COMPONENTS ========================================================================================================================================
+//TODO || STYLED COMPONENTS ========================================================================================================================================
 const Wrapper = styled.div`display : flex ; align-items : center ; justify-content : center ; flex-direction : column ; height : 100%;`
 const PageTitle = styled.h1`text-align : center ; font-size : 30px ; color : lime ; border-bottom : 10px solid lime ; background-color : #202020 ; padding : 1rem; width : 100%; font-weight : bold;`
 const DatasWrapper = styled(Wrapper)`width : 100% ; padding : .5rem 1rem; display : flex ; flex-direction : column ; align-items : start ; justify-content : start; border-bottom : 10px solid white;`

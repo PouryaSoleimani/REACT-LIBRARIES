@@ -68,5 +68,12 @@
       "productId": 4
     }
   ],
-  "users": []
+  "users": [
+    {
+      "id": "08e2",
+      "firstName": "aaaa",
+      "lastName": "",
+      "bold": true
+    }
+  ]
 }

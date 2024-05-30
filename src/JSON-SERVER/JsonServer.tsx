@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import toast, { Toaster } from 'react-hot-toast';
 
 type ProductItemType = { id: string, title: string, price: number }
-type UserType = { id: string | number, firstName: string, lastName: string }
+type UserType = { id: string | number, firstName: string, lastName: string, bold: boolean }
 type UserIdType = string | number
 
 //STYLED COMPONENTS ========================================================================================================================================
@@ -39,6 +39,8 @@ const JsonServer = () => {
   const [lastName, setLastName] = useState('')
 
   const notify = () => toast.success('User Created', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
+  const notify2 = () => toast.success('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
+  const notify3 = () => toast.error('User Not Found', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -56,8 +58,6 @@ const JsonServer = () => {
   const [allusers, setAllusers] = useState([])
   useEffect(() => { getAllUsers() }, [allusers])
 
-  const notify2 = () => toast.success('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
-  const notify3 = () => toast.error('User Not Found', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
 
   function getAllUsers() { axios.get('http://localhost:3000/users').then(response => setAllusers(response.data)) }
 
@@ -74,38 +74,42 @@ const JsonServer = () => {
       .then(response => response.statusText === "OK" ? notify2() : notify3())
   }
 
+  function boldUserHandler(user: { id: UserIdType, firstName: string, lastName: string, bold: false }) {
+    const userId = user.id
+    axios.put(`http://localhost:3000/users/${userId}`, { ...user, bold: !user.bold }).then(response=>console.log(response))
+}
 
-  return (
-    <Wrapper>
-      <Toaster position="top-right" reverseOrder={true} />
+return (
+  <Wrapper>
+    <Toaster position="top-right" reverseOrder={true} />
 
-      <PageTitle>JSON SERVER</PageTitle>
-      <DatasWrapper>
-        {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}
-      </DatasWrapper>
+    <PageTitle>JSON SERVER</PageTitle>
+    <DatasWrapper>
+      {products.map((item: ProductItemType) => <Product key={item.id} >{item.id} . {item.title} - ${item.price} </Product>)}
+    </DatasWrapper>
 
-      <FormWrapper>
-        <Form onSubmit={submitHandler}>
-          <FormTitle>ADD USER</FormTitle>
-          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='First Name' value={firstName} onChange={event => setFirstName(event.target.value)} />
-          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='Last Name' value={lastName} onChange={event => setLastName(event.target.value)} />
-          <Button>SUBMIT</Button>
-        </Form>
-        <div className='text-white text-2xl flex flex-col px-10 py-4 font-semibold space-y-5'>
-          {allusers.map((user: UserType) => <p key={user.id}>{user.firstName} -  {user.lastName}  <button onClick={() => userDelete(user.id)} className='bg-red-700 p-2 rounded-xl'>DELETE</button></p>)}
-        </div>
-      </FormWrapper>
+    <FormWrapper>
+      <Form onSubmit={submitHandler}>
+        <FormTitle>ADD USER</FormTitle>
+        <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='First Name' value={firstName} onChange={event => setFirstName(event.target.value)} />
+        <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='Last Name' value={lastName} onChange={event => setLastName(event.target.value)} />
+        <Button>SUBMIT</Button>
+      </Form>
+      <div className='text-white text-2xl flex flex-col px-10 py-4 font-semibold space-y-5'>
+        {allusers.map((user: UserType) => <p key={user.id} className={`user.bold ? "font-extrabold text-2xl underline" : null`}>{user.firstName} -  {user.lastName}  <button onClick={() => userDelete(user.id)} className='bg-red-700 p-2 rounded-xl'>DELETE</button> <button className='bg-blue-500 p-2 rounded-xl' onClick={() => boldUserHandler({ ...user })}>BOLD</button></p>)}
+      </div>
+    </FormWrapper>
 
-      <FormWrapper>
-        <DeleteForm onSubmit={deleteUserHandler}>
-          <DeleteFormTitle>DELETE USER</DeleteFormTitle>
-          <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='User Name' value={id} onChange={event => setId(event.target.value)} />
-          <DeleteButton>SUBMIT</DeleteButton>
-        </DeleteForm>
-      </FormWrapper>
+    <FormWrapper>
+      <DeleteForm onSubmit={deleteUserHandler}>
+        <DeleteFormTitle>DELETE USER</DeleteFormTitle>
+        <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='User Name' value={id} onChange={event => setId(event.target.value)} />
+        <DeleteButton>SUBMIT</DeleteButton>
+      </DeleteForm>
+    </FormWrapper>
 
-    </Wrapper >
-  )
+  </Wrapper >
+)
 }
 
 export default JsonServer 

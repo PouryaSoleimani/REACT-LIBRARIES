@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import toast, { Toaster } from 'react-hot-toast';
 
 type ProductItemType = { id: string, title: string, price: number }
-type UserType = { id: string | number, firstName: string, lastName: string, bold: boolean }
+type UserType = { id: string | number, firstName: string, lastName: string, bold: false }
 type UserIdType = string | number
 
 //STYLED COMPONENTS ========================================================================================================================================

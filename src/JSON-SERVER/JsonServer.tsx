@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 type ProductItemType = { id: string, title: string, price: number }
 type UserType = { id: string | number, firstName: string, lastName: string }
+type UserIdType = string | number
 
 //STYLED COMPONENTS ========================================================================================================================================
 const Wrapper = styled.div`display : flex ; align-items : center ; justify-content : center ; flex-direction : column ; height : 100%;`
@@ -68,7 +69,10 @@ const JsonServer = () => {
     setId('')
   }
 
-
+  function userDelete(userId: UserIdType) {
+    axios.delete(`http://localhost:3000/users/${userId}`)
+      .then(response => response.statusText === "OK" ? notify2() : notify3())
+  }
 
 
   return (
@@ -88,7 +92,7 @@ const JsonServer = () => {
           <Button>SUBMIT</Button>
         </Form>
         <div className='text-white text-2xl flex flex-col px-10 py-4 font-semibold space-y-5'>
-          {allusers.map((user: UserType) => <p key={user.id}>{user.firstName} -  {user.lastName}  <button className='bg-red-700 p-2 rounded-xl'>DELETE</button></p>)}
+          {allusers.map((user: UserType) => <p key={user.id}>{user.firstName} -  {user.lastName}  <button onClick={() => userDelete(user.id)} className='bg-red-700 p-2 rounded-xl'>DELETE</button></p>)}
         </div>
       </FormWrapper>
 
@@ -100,7 +104,7 @@ const JsonServer = () => {
         </DeleteForm>
       </FormWrapper>
 
-    </Wrapper>
+    </Wrapper >
   )
 }
 

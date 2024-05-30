@@ -68,11 +68,5 @@
       "productId": 4
     }
   ],
-  "users": [
-    {
-      "id": "a203",
-      "firstName": "alireza",
-      "lastName": "hoseini"
-    }
-  ]
+  "users": []
 }

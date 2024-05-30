@@ -3,7 +3,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import toast, { Toaster } from 'react-hot-toast';
+
 type ProductItemType = { id: string, title: string, price: number }
+type UserType = { id: string | number, firstName: string, lastName: string }
 
 //STYLED COMPONENTS ========================================================================================================================================
 const Wrapper = styled.div`display : flex ; align-items : center ; justify-content : center ; flex-direction : column ; height : 100%;`
@@ -29,6 +31,8 @@ const JsonServer = () => {
 
   useEffect(() => { fetcher() }, [])
 
+
+
   //* FORM - {POST}
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -37,7 +41,7 @@ const JsonServer = () => {
 
   function submitHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const userInfo = {firstName, lastName }
+    const userInfo = { firstName, lastName }
     axios.post('http://localhost:3000/users', userInfo).then(response => console.log(response))
     notify()
     setFirstName(''); setLastName('')
@@ -48,9 +52,13 @@ const JsonServer = () => {
   //! FORM - {DELETE}
   const [id, setId] = useState('')
   const [name, setName] = useState('')
+  const [allusers, setAllusers] = useState([])
+  useEffect(() => { getAllUsers() }, [allusers])
 
   const notify2 = () => toast.success('User Deleted', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid lime", fontWeight: 900 } })
   const notify3 = () => toast.error('User Not Found', { style: { borderRadius: '10px', background: '#333', color: '#fff', border: "3px solid red", fontWeight: 900 } })
+
+  function getAllUsers() { axios.get('http://localhost:3000/users').then(response => setAllusers(response.data)) }
 
   function deleteUserHandler(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -79,6 +87,9 @@ const JsonServer = () => {
           <input className='p-4 text-xl text-black rounded-xl' type="text" placeholder='Last Name' value={lastName} onChange={event => setLastName(event.target.value)} />
           <Button>SUBMIT</Button>
         </Form>
+        <div className='text-white text-2xl flex flex-col px-10 py-4 font-semibold space-y-5'>
+          {allusers.map((user: UserType) => <p key={user.id}>{user.firstName} -  {user.lastName}  <button className='bg-red-700 p-2 rounded-xl'>DELETE</button></p>)}
+        </div>
       </FormWrapper>
 
       <FormWrapper>
